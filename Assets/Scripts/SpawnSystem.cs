@@ -17,7 +17,7 @@ public class SpawnSystem : MonoBehaviour
     {
         yield return new WaitForSeconds(CooldownSpawn);
         GameObject Enemy = Instantiate(EnemyPrefab, Enemies);
-        Enemy.transform.position = new Vector3(Random.Range(MinMaxValueX.x, MinMaxValueX.y),5.8f,1);
+        Enemy.transform.position = new Vector3(Random.Range(MinMaxValueX.x, MinMaxValueX.y),5.8f,-1);
         StartCoroutine(SpawnEnemy());
     }
 }
